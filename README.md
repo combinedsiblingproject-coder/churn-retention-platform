@@ -3,6 +3,10 @@
 ## Overview
 This project is an API-first but GUI visualized churn prediction and marketing retention platform designed to help marketing and product teams identify at-risk users, understand churn drivers, and trigger targeted retention actions.
 
+The goal is not just to train a machine learning model, but to design a
+practical system that can be used by product, operations, and customer success teams
+to identify at-risk users and take retention actions.
+
 ## Problem Statement
 Marketing teams often lack actionable insights on which users are likely to churn and why, resulting in ineffective blanket campaigns and revenue loss.
 
