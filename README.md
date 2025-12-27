@@ -27,7 +27,12 @@ This platform predicts churn risk, explains the drivers behind churn, and recomm
 
 ## Dataset (In 2 Phases)
 - KKBox's Churn Dataset (https://www.kaggle.com/competitions/kkbox-churn-prediction-challenge/data)
-- eCommerce behavior data from multi category store (https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store)
+- eCommerce behavior data from multi category store (https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
+
+## Tools & Technologies
+- Python (pandas, numpy, seaborn, matplotlib)
+- Tableau (visual exploratory analysis)
+- Jupyter Notebook
 
 ## Status
 🚧 Week 1: Project setup and data exploration
