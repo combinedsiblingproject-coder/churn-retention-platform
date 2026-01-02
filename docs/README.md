@@ -25,7 +25,7 @@ The goal is to discover
 - Effect of paymentMethod/planDay on planPrice>Actual --> LoyaltyRewards? --> All these cases account for, so NO.
 
 - txnDate<expiryDate --> (for is_cancel=0:expiry= txndata+30) & (for is_cancel=1: expiry=txndata)
-- transaction_date = (20150101 to 20170228)	&& membership_expire_date = (19700101 to  20170331)--> Clean txnDate<expiryDate
+- transaction_date = (20150101 to 20170228)	&& membership_expire_date = (19700101 to  20170331)--> taken care by above
 - isCancel=0 & txndata+planDay>ExpiryDate --> Probe & what to do?
 - isCancel=0 & txndata+planDay<ExpiryDate --> Probe & what to do?
 - Context for 3339 Duplicate rows - Probe & What to do?

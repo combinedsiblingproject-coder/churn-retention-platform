@@ -35,5 +35,15 @@ This platform predicts churn risk, explains the drivers behind churn, and recomm
 - Jupyter Notebook
 
 ## Status
-🚧 Week 1: Project setup and data exploration
+
+### Week 1: 
+- Project setup and 
+- Data exploration
+
+### Week 2:
+- Churn labels isolated and frozen
+- Transaction-based behavioral features created
+- Leakage and sanity checks completed
+- Modeling dataset v1 finalized
+
 

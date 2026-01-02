@@ -209,6 +209,6 @@ __marimo__/
 
 #user file + venv + notebooks
 venv/
-data/raw/
+data/
 __pycache__/
 .ipynb_checkpoints/
