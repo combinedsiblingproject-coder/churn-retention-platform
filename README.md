@@ -45,5 +45,7 @@ This platform predicts churn risk, explains the drivers behind churn, and recomm
 - Transaction-based behavioral features created
 - Leakage and sanity checks completed
 - Modeling dataset v1 finalized
+- Backfill algorithm: used for transactions but not being utlized right now since we are creating baseline as of now & we can't do that if there are inferred data present along with real data - may give rise to synthetic signals: We will use backfill to investigae whether this improves our prediction or not & then decide to do this. ALternatively, the data may be some kind of marker which we don't have explanation for now & may be relvealed later as maybe - loyalities rewards or refunds. So, better to keep the data at this stage. So the process for cleaning: Model with raw data --> Measure impact --> Introduce corrections --> Validate gains
+- 
 
 
