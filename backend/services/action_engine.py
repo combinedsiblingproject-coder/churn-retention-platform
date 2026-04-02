@@ -1,6 +1,5 @@
 from config.action_config import ACTIONS
 
-
 def get_action(persona, risk, time_bucket):
 
     try:
@@ -9,6 +8,11 @@ def get_action(persona, risk, time_bucket):
         return ["No Action"]
 
 
+# -------------------------------
+# Following was simple action model and has been discarded, using above function to fetch actions instead.
+# -------------------------------
+
+'''
 def get_recommended_action(risk, context):
 
     payment = context["payment_state"]
@@ -57,3 +61,5 @@ def get_recommended_action(risk, context):
             return "Upsell premium / long-term plan"
 
         return "No action / maintain experience"
+
+    # --- END SIMPLE ---'''

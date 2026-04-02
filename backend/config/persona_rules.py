@@ -24,7 +24,7 @@ PERSONA_RULES = [
         "name": "Payment-Friction User",
         "priority": 3,
         "conditions": {
-            "payment": ["Critical"]
+            "payment": ["Critical","Friction"]
         }
     },
 
@@ -92,8 +92,8 @@ PERSONA_RULES = [
         "priority": 0,
         "conditions": {
             "lifecycle": ["Steady", "Late"],
-            "engagement": ["Strong"],
-            "volatility": ["Low", "Medium"]
+            "engagement": ["Strong", "Average"],
+            "volatility": ["Low", "Medium", "Ultra Low"]
         }
     }
 ]

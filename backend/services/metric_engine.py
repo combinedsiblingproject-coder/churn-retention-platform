@@ -1,10 +1,10 @@
 import joblib
-from backend.services.utils import get_percentile_bucket
+from services.utils import get_percentile_bucket
 
 # -------------------------------
 # LOAD DISTRIBUTIONS
 # -------------------------------
-dist = joblib.load("backend/config/distributions.pkl")
+dist = joblib.load("config/distributions.pkl")
 
 ENG_THRESH = dist["engagement"]   # [20,40,60,80]
 VOL_THRESH = dist["volatility"]
@@ -24,7 +24,6 @@ def build_user_context(user, stats):
         "payment": bucket_payment_status(
             user["is_auto_renew"],
             user["remaining_days"],
-            user["time_remaining"],
             stats
         ),
         "lifecycle": bucket_lifecycle(user["tenure_days"]),
@@ -149,7 +148,7 @@ def bucket_volatility(score):
 # PAYMENT STATUS
 # -------------------------------
 
-def bucket_payment_status(auto_renew, remaining_days, time_remaining, stats):
+def bucket_payment_status(auto_renew, remaining_days, stats):
 
     if auto_renew == 0:
 
@@ -159,12 +158,11 @@ def bucket_payment_status(auto_renew, remaining_days, time_remaining, stats):
         if remaining_days > 7:
             return "Stable"
 
-        if time_remaining >= mean:
-            return "Friction"
-        elif time_remaining >= (mean - std):
+        elif remaining_days <= (mean - (1.05) * std):
             return "Critical"
+        
         else:
-            return "Voluntary"
+            return "Friction"
 
     else:
 
@@ -174,12 +172,12 @@ def bucket_payment_status(auto_renew, remaining_days, time_remaining, stats):
         if remaining_days > 7:
             return "Stable"
 
-        if time_remaining >= (mean - std):
-            return "Friction"
-        elif time_remaining >= (mean - 2 * std):
+        elif remaining_days <= (mean - (1.02) * std):
             return "Critical"
+        
         else:
-            return "Voluntary"
+            return "Friction"
+        
 
 
 # -------------------------------
