@@ -227,6 +227,6 @@ st.markdown("### 🔗 Project Links")
 
 col1, col2, col3 = st.columns(3)
 
-col1.markdown("[📂 GitHub Repo](#)")
-col2.markdown("[📊 Dataset](#)")
-col3.markdown("[🚀 Live Demo](#)")
+col1.markdown("[📂 GitHub Repo](https://github.com/Big4SiRaz/churn-retention-platform)")
+col2.markdown("[📊 Dataset](https://www.kaggle.com/competitions/kkbox-churn-prediction-challenge/data)")
+col3.markdown("[🚀 Live Demo](Please-Wait)")
